@@ -21,14 +21,6 @@ public class Actor {
     @Column(name="last_update")
     private Calendar lastUpdate;
 
-//    public short getId(){
-//        return id;
-//    }
-//
-//
-//    public void setId(Short id){
-//        this.id = id;
-//    }
     public String getFirstName(){
         return firstName;
     }

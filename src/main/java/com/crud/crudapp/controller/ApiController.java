@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 public class ApiController {
 
-    @Autowired
     private final ActorRepo actorRepository;
 
     @Autowired
