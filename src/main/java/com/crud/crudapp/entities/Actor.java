@@ -1,15 +1,17 @@
-package com.crud.crudApp.Entities;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+package com.crud.crudapp.entities;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import  java.util.Calendar;
 
 @Entity
 @Table(name="actor")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Actor {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "actor_id")
     private Short id;
     @Column(name = "first_name")
@@ -19,16 +21,18 @@ public class Actor {
     @Column(name="last_update")
     private Calendar lastUpdate;
 
-    public short getId(){
-        return id;
-    }
-    public void setId(Short id){
-        this.id = id;
-    }
+//    public short getId(){
+//        return id;
+//    }
+//
+//
+//    public void setId(Short id){
+//        this.id = id;
+//    }
     public String getFirstName(){
         return firstName;
     }
-    public void setFirstName(String first_name){
+    public void setFirstName(String firstName){
         this.firstName = firstName;
     }
     public String getLastName(){
